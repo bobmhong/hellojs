@@ -8,12 +8,32 @@
     <title>Ghibli App</title>
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 
 </head>
 
 <body>
-
+    <div id="banner"></div>
+    <div id="userform">
+        <form>
+            <div class="small-container">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="First Name">
+            </div>
+            <div class="small-container">
+                <label for="messagelength">Greeting Length</label><label id="lblmessagelengthvalue">100</label>
+                <input id="messagelength" type="range" name="messagelength" min="1" max="5000" value="100">
+            </div>
+            <div class="small-container">
+                <label for="delayms">Delay in Milliseconds to wait before returning greeting</label><label id="lbldelaymsvalue">100</label>
+                <input id="delayms" type="range" name="delayms" min="1" max="5000" value="100">
+            </div>
+        </form>
+        <div class="small-container">
+            <button id="btnSubmit" class="round-button">Submit</button>
+        </div>
+    </div>
     <div id="root"></div>
 
     <script src="scripts.js"></script>

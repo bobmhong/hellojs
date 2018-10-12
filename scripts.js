@@ -1,12 +1,25 @@
 const app = document.getElementById('root');
 
+// Load the banner image
 const logo = document.createElement('img');
 logo.src = 'images/HelloBanner.png';
+document.getElementById('banner').appendChild(logo);
 
+// Setup the form behavior
+const msglen = document.getElementById('messagelength');
+const msglenlabel = document.getElementById('lblmessagelengthvalue');
+msglen.onchange = function() {
+    msglenlabel.textContent = msglen.value;
+};
+const delayms = document.getElementById('delayms');
+const delaymslabel = document.getElementById('lbldelaymsvalue');
+delayms.onchange = function() {
+    delaymslabel.textContent = delayms.value;
+};
+
+// Create the main container
 const container = document.createElement('div');
 container.setAttribute('class', 'container');
-
-app.appendChild(logo);
 app.appendChild(container);
 
 var request = new XMLHttpRequest();
