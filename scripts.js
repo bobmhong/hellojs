@@ -1,3 +1,7 @@
+function greetMe() {
+    alert('Hey Man!');
+}
+
 const app = document.getElementById('root');
 
 // Load the banner image
